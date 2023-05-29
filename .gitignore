@@ -1,5 +1,11 @@
+# Nix directories
+result
+
 # Local .terraform directories
 **/.terraform/*
+
+# Terraform lockfile
+.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
