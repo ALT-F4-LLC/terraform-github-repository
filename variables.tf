@@ -84,11 +84,6 @@ variable "topics" {
   type        = list(string)
 }
 
-variable "type" {
-  description = "The type of repository"
-  type        = string
-}
-
 variable "visibility" {
   default     = "private"
   description = "The visibility of the repository"
