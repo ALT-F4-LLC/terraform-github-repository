@@ -57,6 +57,12 @@ variable "has_wiki" {
   type        = bool
 }
 
+variable "license_template" {
+  default     = null
+  description = "Wheter the repository uses a license template"
+  type        = string
+}
+
 variable "name" {
   description = "The name of the repository"
   type        = string
