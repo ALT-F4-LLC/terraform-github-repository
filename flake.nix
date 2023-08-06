@@ -2,7 +2,7 @@
   description = "terraform-github-repository";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -14,16 +14,17 @@
             github
           ]);
 
-          default = pkgs.runCommand "default" {
-            src = ./.;
-          } ''
+          default = pkgs.runCommand "default"
+            {
+              src = ./.;
+            } ''
             mkdir -p $out
             cp -R $src/*.tf $out
 
             ${config.packages.terraform-with-plugins}/bin/terraform -chdir="$out" init
             ${config.packages.terraform-with-plugins}/bin/terraform -chdir="$out" validate
           '';
-          };
+        };
 
         devShells = {
           default = pkgs.mkShell {

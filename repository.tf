@@ -12,6 +12,7 @@ resource "github_repository" "self" {
   has_projects           = var.has_projects
   has_wiki               = var.has_wiki
   is_template            = false
+  license_template       = var.license_template
   name                   = var.name
   topics                 = var.topics
   visibility             = var.visibility
