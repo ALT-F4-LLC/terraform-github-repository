@@ -37,6 +37,7 @@ No modules.
 | <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Whether to allow squash merges | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | The description of the repository | `string` | n/a | yes |
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | The gitignore template of the repository | `string` | `null` | no |
+| <a name="input_has_branch_protection"></a> [has\_branch\_protection](#input\_has\_branch\_protection) | Whether the repository has branch protection enabled | `bool` | `true` | no |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Whether the repository has discussions enabled | `bool` | `false` | no |
 | <a name="input_has_issues"></a> [has\_issues](#input\_has\_issues) | Whether the repository has issues enabled | `bool` | `false` | no |
 | <a name="input_has_projects"></a> [has\_projects](#input\_has\_projects) | Whether the repository has projects enabled | `bool` | `false` | no |
