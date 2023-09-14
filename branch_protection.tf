@@ -1,6 +1,7 @@
 resource "github_branch_protection" "self" {
   allows_deletions                = false
   allows_force_pushes             = false
+  count                           = try(var.has_branch_protection ? 1 : 0, 1)
   enforce_admins                  = true
   pattern                         = "main"
   repository_id                   = github_repository.self.node_id

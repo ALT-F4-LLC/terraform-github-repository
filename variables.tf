@@ -33,6 +33,12 @@ variable "gitignore_template" {
   type        = string
 }
 
+variable "has_branch_protection" {
+  default     = true
+  description = "Whether the repository has branch protection enabled"
+  type        = bool
+}
+
 variable "has_discussions" {
   default     = false
   description = "Whether the repository has discussions enabled"
