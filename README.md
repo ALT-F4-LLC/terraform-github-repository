@@ -6,13 +6,13 @@ Terraform module which creates GitHub repository resources.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_github"></a> [github](#requirement\_github) | 5.25.1 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | 5.37.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.25.1 |
+| <a name="provider_github"></a> [github](#provider\_github) | 5.37.0 |
 
 ## Modules
 
@@ -22,10 +22,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/branch_protection) | resource |
-| [github_repository.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/repository) | resource |
-| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/team_repository) | resource |
-| [github_team.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/data-sources/team) | data source |
+| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/branch_protection) | resource |
+| [github_repository.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/repository) | resource |
+| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/team_repository) | resource |
+| [github_team.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/data-sources/team) | data source |
 
 ## Inputs
 
