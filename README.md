@@ -6,13 +6,13 @@ Terraform module which creates GitHub repository resources.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_github"></a> [github](#requirement\_github) | 5.25.1 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | 5.37.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.25.1 |
+| <a name="provider_github"></a> [github](#provider\_github) | 5.37.0 |
 
 ## Modules
 
@@ -22,10 +22,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/branch_protection) | resource |
-| [github_repository.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/repository) | resource |
-| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/resources/team_repository) | resource |
-| [github_team.self](https://registry.terraform.io/providers/integrations/github/5.25.1/docs/data-sources/team) | data source |
+| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/branch_protection) | resource |
+| [github_repository.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/repository) | resource |
+| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/resources/team_repository) | resource |
+| [github_team.self](https://registry.terraform.io/providers/integrations/github/5.37.0/docs/data-sources/team) | data source |
 
 ## Inputs
 
@@ -53,5 +53,14 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_full_name"></a> [full\_name](#output\_full\_name) | The full name of the repository. |
+| <a name="output_git_clone_url"></a> [git\_clone\_url](#output\_git\_clone\_url) | The Git URL of the repository. |
+| <a name="output_html_url"></a> [html\_url](#output\_html\_url) | The HTML URL of the repository. |
+| <a name="output_http_clone_url"></a> [http\_clone\_url](#output\_http\_clone\_url) | The HTTP URL of the repository. |
+| <a name="output_node_id"></a> [node\_id](#output\_node\_id) | The Node ID of the repository. |
+| <a name="output_repo_id"></a> [repo\_id](#output\_repo\_id) | The ID of the repository. |
+| <a name="output_ssh_clone_url"></a> [ssh\_clone\_url](#output\_ssh\_clone\_url) | The SSH URL of the repository. |
+| <a name="output_svn_url"></a> [svn\_url](#output\_svn\_url) | The SVN URL of the repository. |
 <!-- END_TF_DOCS -->

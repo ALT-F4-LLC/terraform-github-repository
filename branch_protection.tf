@@ -19,3 +19,8 @@ resource "github_branch_protection" "self" {
     required_approving_review_count = 0
   }
 }
+
+moved {
+  from = github_branch_protection.self
+  to   = github_branch_protection.self[0]
+}
