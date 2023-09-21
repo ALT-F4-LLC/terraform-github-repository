@@ -53,5 +53,14 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_full_name"></a> [full\_name](#output\_full\_name) | The full name of the repository. |
+| <a name="output_git_clone_url"></a> [git\_clone\_url](#output\_git\_clone\_url) | The Git URL of the repository. |
+| <a name="output_html_url"></a> [html\_url](#output\_html\_url) | The HTML URL of the repository. |
+| <a name="output_http_clone_url"></a> [http\_clone\_url](#output\_http\_clone\_url) | The HTTP URL of the repository. |
+| <a name="output_node_id"></a> [node\_id](#output\_node\_id) | The Node ID of the repository. |
+| <a name="output_repo_id"></a> [repo\_id](#output\_repo\_id) | The ID of the repository. |
+| <a name="output_ssh_clone_url"></a> [ssh\_clone\_url](#output\_ssh\_clone\_url) | The SSH URL of the repository. |
+| <a name="output_svn_url"></a> [svn\_url](#output\_svn\_url) | The SVN URL of the repository. |
 <!-- END_TF_DOCS -->
