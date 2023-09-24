@@ -75,7 +75,7 @@ variable "name" {
 }
 
 variable "owner" {
-  description = "The name of the organization"
+  description = "The name of the repository"
   type        = string
 }
 
@@ -86,6 +86,7 @@ variable "required_status_checks_contexts" {
 }
 
 variable "team_slug" {
+  default     = null
   description = "The slug of the team to grant access to"
   type        = string
 }

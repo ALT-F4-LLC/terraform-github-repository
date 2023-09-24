@@ -44,9 +44,9 @@ No modules.
 | <a name="input_has_wiki"></a> [has\_wiki](#input\_has\_wiki) | Whether the repository has wiki enabled | `bool` | `false` | no |
 | <a name="input_license_template"></a> [license\_template](#input\_license\_template) | Wheter the repository uses a license template | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the repository | `string` | n/a | yes |
-| <a name="input_owner"></a> [owner](#input\_owner) | The name of the organization | `string` | n/a | yes |
+| <a name="input_owner"></a> [owner](#input\_owner) | The name of the repository | `string` | n/a | yes |
 | <a name="input_required_status_checks_contexts"></a> [required\_status\_checks\_contexts](#input\_required\_status\_checks\_contexts) | The list of status checks to require in order to merge into this branch | `list(string)` | `[]` | no |
-| <a name="input_team_slug"></a> [team\_slug](#input\_team\_slug) | The slug of the team to grant access to | `string` | n/a | yes |
+| <a name="input_team_slug"></a> [team\_slug](#input\_team\_slug) | The slug of the team to grant access to | `string` | `null` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | The visibility of the repository | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Whether the repository has vulnerability alerts enabled | `bool` | `false` | no |
