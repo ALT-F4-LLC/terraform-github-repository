@@ -3,7 +3,7 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = inputs@{ flake-parts, ... }:
+  outputs = inputs@{ flake-parts, nixpkgs, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
       perSystem = { config, self', inputs', pkgs, system, ... }:
@@ -12,12 +12,17 @@
             homepage = "https://registry.terraform.io/providers/integrations/github";
             owner = "integrations";
             repo = "terraform-provider-github";
-            rev = "v5.37.0";
-            hash = "sha256-E53MbDM9ufQD0AnlIkdmNRcAlkGj+IACTwMPDUyNkqQ=";
+            rev = "v5.41.0";
+            hash = "sha256-fWxWcHy3TWFEpkU9uDSsHbUu+dnQKfvquN63eZH+Qf0=";
             vendorHash = null;
           };
         in
         {
+          _module.args.pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+
           packages = {
             terraform-with-plugins = pkgs.terraform.withPlugins (ps: [
               terraform-github
