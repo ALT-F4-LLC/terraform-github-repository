@@ -75,7 +75,7 @@ variable "name" {
 }
 
 variable "owner" {
-  description = "The name of the repository"
+  description = "The owner of the repository"
   type        = string
 }
 
