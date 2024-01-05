@@ -8,6 +8,7 @@
       systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
       perSystem = { config, self', inputs', pkgs, system, ... }:
         let
+          inherit (pkgs) just terraform terraform-docs;
           terraform-github = pkgs.terraform-providers.mkProvider {
             homepage = "https://registry.terraform.io/providers/integrations/github";
             owner = "integrations";
@@ -42,7 +43,8 @@
 
           devShells = {
             default = pkgs.mkShell {
-              buildInputs = with pkgs; [
+              buildInputs = [
+                just
                 terraform
                 terraform-docs
               ];
