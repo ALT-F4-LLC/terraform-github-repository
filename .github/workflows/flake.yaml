@@ -14,4 +14,4 @@ jobs:
     - uses: DeterminateSystems/nix-installer-action@v4
     - uses: DeterminateSystems/magic-nix-cache-action@v2
     - run: nix flake check
-    - run: nix build --json --no-link --print-build-logs
+    - run: nix develop -c just check

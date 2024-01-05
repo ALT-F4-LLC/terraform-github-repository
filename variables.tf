@@ -85,10 +85,28 @@ variable "required_status_checks_contexts" {
   type        = list(string)
 }
 
-variable "team_slug" {
-  default     = null
-  description = "The slug of the team to grant access to"
-  type        = string
+variable "teams" {
+  default     = {}
+  description = "The teams to grant access to, and their permission levels"
+  type        = map(string)
+
+  validation {
+    condition = alltrue([
+      for value in var.teams : contains(
+        [
+          // https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository#permission
+          "pull",
+          "triage",
+          "push",
+          "maintain",
+          "admin"
+        ],
+        value
+      )
+    ])
+
+    error_message = "Team permissions must be one of 'pull', 'triage', 'push', 'maintain', 'admin'."
+  }
 }
 
 variable "topics" {
