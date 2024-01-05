@@ -86,7 +86,7 @@ variable "required_status_checks_contexts" {
 }
 
 variable "teams" {
-  default     = null
+  default     = {}
   description = "The teams to grant access to, and their permission levels"
   type        = map(string)
 
