@@ -1,7 +1,7 @@
 resource "github_team_repository" "self" {
-  count = var.team_slug != null ? 1 : 0
+  count = length(keys(var.teams))
 
-  permission = "admin"
+  permission = var.teams[keys(var.teams)[count.index]]
   repository = github_repository.self.name
   team_id    = data.github_team.self[0].id
 }

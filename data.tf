@@ -1,5 +1,5 @@
 data "github_team" "self" {
-  count = var.team_slug != null ? 1 : 0
+  count = length(keys(var.teams))
 
-  slug = var.team_slug
+  slug = keys(var.teams)[count.index]
 }
