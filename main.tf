@@ -3,7 +3,7 @@ resource "github_team_repository" "self" {
 
   permission = var.teams[keys(var.teams)[count.index]]
   repository = github_repository.self.name
-  team_id    = data.github_team.self[0].id
+  team_id    = data.github_team.self[count.index].id
 }
 
 resource "github_repository" "self" {
