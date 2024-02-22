@@ -6,13 +6,14 @@ Terraform module which creates GitHub repository resources.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_github"></a> [github](#requirement\_github) | 5.41.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.41.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 5 |
 
 ## Modules
 
@@ -22,10 +23,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/5.41.0/docs/resources/branch_protection) | resource |
-| [github_repository.self](https://registry.terraform.io/providers/integrations/github/5.41.0/docs/resources/repository) | resource |
-| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/5.41.0/docs/resources/team_repository) | resource |
-| [github_team.self](https://registry.terraform.io/providers/integrations/github/5.41.0/docs/data-sources/team) | data source |
+| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_repository.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team.self](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/team) | data source |
 
 ## Inputs
 
@@ -44,7 +45,7 @@ No modules.
 | <a name="input_has_wiki"></a> [has\_wiki](#input\_has\_wiki) | Whether the repository has wiki enabled | `bool` | `false` | no |
 | <a name="input_license_template"></a> [license\_template](#input\_license\_template) | Wheter the repository uses a license template | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the repository | `string` | n/a | yes |
-| <a name="input_owner"></a> [owner](#input\_owner) | The name of the repository | `string` | n/a | yes |
+| <a name="input_owner"></a> [owner](#input\_owner) | The owner of the repository | `string` | n/a | yes |
 | <a name="input_required_status_checks_contexts"></a> [required\_status\_checks\_contexts](#input\_required\_status\_checks\_contexts) | The list of status checks to require in order to merge into this branch | `list(string)` | `[]` | no |
 | <a name="input_teams"></a> [teams](#input\_teams) | The teams to grant access to, and their permission levels | `map(string)` | `{}` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
