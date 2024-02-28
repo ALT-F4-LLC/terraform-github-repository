@@ -1,11 +1,11 @@
 _default:
     just --list
 
-build profile="default":
-    nix build --json --no-link --print-build-logs ".#{{ profile }}"
+build:
+    nix build --json --no-link --print-build-logs
 
-cache-build profile cache_name="altf4llc-os":
-    just build "{{ profile }}" \
+cache-build cache_name="altf4llc-os":
+    just build \
         | jq -r '.[].outputs | to_entries[].value' \
         | cachix push {{ cache_name }}
 
