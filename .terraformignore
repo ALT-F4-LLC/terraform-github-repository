@@ -3,4 +3,4 @@
 .gitignore
 flake.lock
 flake.nix
-makefile
+justfile

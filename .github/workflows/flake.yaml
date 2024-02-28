@@ -7,11 +7,30 @@ on:
       - main
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: DeterminateSystems/nix-installer-action@v4
-    - uses: DeterminateSystems/magic-nix-cache-action@v2
-    - run: nix flake check
-    - run: nix develop -c just check
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: cachix/cachix-action@v12
+        with:
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          name: altf4llc-os
+      - uses: actions/checkout@v3
+      - run: cachix use altf4llc-os
+      - run: nix develop -c just check
+      - run: nix develop -c just cache-inputs
+      - run: nix develop -c just cache-shell
+
+  build:
+    needs:
+      - check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: cachix/cachix-action@v12
+        with:
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          name: altf4llc-os
+      - uses: actions/checkout@v4
+      - run: cachix use altf4llc-os
+      - run: nix develop -c just cache-build
