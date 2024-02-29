@@ -27,6 +27,12 @@ variable "description" {
   type        = string
 }
 
+variable "enable_pages" {
+  default     = false
+  description = "Whether to enable GitHub Pages"
+  type        = bool
+}
+
 variable "gitignore_template" {
   default     = null
   description = "The gitignore template of the repository"
@@ -63,6 +69,12 @@ variable "has_wiki" {
   type        = bool
 }
 
+variable "homepage_url" {
+  default     = null
+  description = "The URL of a page to use as the repository's home page"
+  type        = string
+}
+
 variable "license_template" {
   default     = null
   description = "Wheter the repository uses a license template"
@@ -76,6 +88,30 @@ variable "name" {
 
 variable "owner" {
   description = "The owner of the repository"
+  type        = string
+}
+
+variable "pages_branch" {
+  default     = null
+  description = "The branch to use for GitHub Pages"
+  type        = string
+}
+
+variable "pages_build_type" {
+  default     = "workflow"
+  description = "The build type of the GitHub Pages"
+  type        = string
+}
+
+variable "pages_cname" {
+  default     = null
+  description = "The custom domain of the GitHub Pages"
+  type        = string
+}
+
+variable "pages_path" {
+  default     = null
+  description = "The path to the GitHub Pages content"
   type        = string
 }
 
