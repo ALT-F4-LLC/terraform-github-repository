@@ -36,6 +36,7 @@ No modules.
 | <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Whether to allow rebase merges | `bool` | `true` | no |
 | <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Whether to allow squash merges | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | The description of the repository | `string` | n/a | yes |
+| <a name="input_dismiss_stale_reviews"></a> [dismiss\_stale\_reviews](#input\_dismiss\_stale\_reviews) | Whether to enable dismissing stale pull request reviews | `bool` | `true` | no |
 | <a name="input_enable_pages"></a> [enable\_pages](#input\_enable\_pages) | Whether to enable GitHub Pages | `bool` | `false` | no |
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | The gitignore template of the repository | `string` | `null` | no |
 | <a name="input_has_branch_protection"></a> [has\_branch\_protection](#input\_has\_branch\_protection) | Whether the repository has branch protection enabled | `bool` | `true` | no |
@@ -51,6 +52,7 @@ No modules.
 | <a name="input_pages_build_type"></a> [pages\_build\_type](#input\_pages\_build\_type) | The build type of the GitHub Pages | `string` | `"workflow"` | no |
 | <a name="input_pages_cname"></a> [pages\_cname](#input\_pages\_cname) | The custom domain of the GitHub Pages | `string` | `null` | no |
 | <a name="input_pages_path"></a> [pages\_path](#input\_pages\_path) | The path to the GitHub Pages content | `string` | `null` | no |
+| <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | The number of approving reviews required to change code | `number` | `0` | no |
 | <a name="input_required_status_checks_contexts"></a> [required\_status\_checks\_contexts](#input\_required\_status\_checks\_contexts) | The list of status checks to require in order to merge into this branch | `list(string)` | `[]` | no |
 | <a name="input_teams"></a> [teams](#input\_teams) | The teams to grant access to, and their permission levels | `map(string)` | `{}` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
