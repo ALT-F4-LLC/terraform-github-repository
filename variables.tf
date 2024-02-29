@@ -39,6 +39,12 @@ variable "enable_pages" {
   type        = bool
 }
 
+variable "enforce_admins" {
+  default     = false
+  description = "Whether to enforce branch protection for administrators"
+  type        = bool
+}
+
 variable "gitignore_template" {
   default     = null
   description = "The gitignore template of the repository"
@@ -135,7 +141,7 @@ variable "required_status_checks_contexts" {
 
 variable "teams" {
   default     = {}
-  description = "The teams to grant access to, and their permission levels"
+  description = "The team ids to grant access to, and their permission levels"
   type        = map(string)
 
   validation {

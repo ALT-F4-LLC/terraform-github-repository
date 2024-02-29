@@ -3,7 +3,7 @@ resource "github_team_repository" "self" {
 
   permission = var.teams[keys(var.teams)[count.index]]
   repository = github_repository.self.name
-  team_id    = data.github_team.self[count.index].id
+  team_id    = keys(var.teams)[count.index]
 }
 
 resource "github_repository" "self" {
@@ -43,10 +43,11 @@ resource "github_repository" "self" {
 }
 
 resource "github_branch_protection" "self" {
+  count = try(var.has_branch_protection ? 1 : 0, 1)
+
   allows_deletions                = false
   allows_force_pushes             = false
-  count                           = try(var.has_branch_protection ? 1 : 0, 1)
-  enforce_admins                  = true
+  enforce_admins                  = var.enforce_admins
   pattern                         = "main"
   repository_id                   = github_repository.self.node_id
   require_conversation_resolution = true
