@@ -25,7 +25,6 @@ No modules.
 | [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/branch_protection) | resource |
 | [github_repository.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/repository) | resource |
 | [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/team_repository) | resource |
-| [github_team.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/data-sources/team) | data source |
 
 ## Inputs
 
@@ -38,6 +37,7 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | The description of the repository | `string` | n/a | yes |
 | <a name="input_dismiss_stale_reviews"></a> [dismiss\_stale\_reviews](#input\_dismiss\_stale\_reviews) | Whether to enable dismissing stale pull request reviews | `bool` | `true` | no |
 | <a name="input_enable_pages"></a> [enable\_pages](#input\_enable\_pages) | Whether to enable GitHub Pages | `bool` | `false` | no |
+| <a name="input_enforce_admins"></a> [enforce\_admins](#input\_enforce\_admins) | Whether to enforce branch protection for administrators | `bool` | `false` | no |
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | The gitignore template of the repository | `string` | `null` | no |
 | <a name="input_has_branch_protection"></a> [has\_branch\_protection](#input\_has\_branch\_protection) | Whether the repository has branch protection enabled | `bool` | `true` | no |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Whether the repository has discussions enabled | `bool` | `false` | no |
@@ -54,7 +54,7 @@ No modules.
 | <a name="input_pages_path"></a> [pages\_path](#input\_pages\_path) | The path to the GitHub Pages content | `string` | `null` | no |
 | <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | The number of approving reviews required to change code | `number` | `0` | no |
 | <a name="input_required_status_checks_contexts"></a> [required\_status\_checks\_contexts](#input\_required\_status\_checks\_contexts) | The list of status checks to require in order to merge into this branch | `list(string)` | `[]` | no |
-| <a name="input_teams"></a> [teams](#input\_teams) | The teams to grant access to, and their permission levels | `map(string)` | `{}` | no |
+| <a name="input_teams"></a> [teams](#input\_teams) | The team ids to grant access to, and their permission levels | `map(string)` | `{}` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | The visibility of the repository | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Whether the repository has vulnerability alerts enabled | `bool` | `false` | no |
