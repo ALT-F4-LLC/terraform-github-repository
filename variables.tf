@@ -27,6 +27,12 @@ variable "description" {
   type        = string
 }
 
+variable "dismiss_stale_reviews" {
+  default     = true
+  description = "Whether to enable dismissing stale pull request reviews"
+  type        = bool
+}
+
 variable "enable_pages" {
   default     = false
   description = "Whether to enable GitHub Pages"
@@ -113,6 +119,12 @@ variable "pages_path" {
   default     = null
   description = "The path to the GitHub Pages content"
   type        = string
+}
+
+variable "required_approving_review_count" {
+  default     = 0
+  description = "The number of approving reviews required to change code"
+  type        = number
 }
 
 variable "required_status_checks_contexts" {

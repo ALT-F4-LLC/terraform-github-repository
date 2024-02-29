@@ -59,12 +59,7 @@ resource "github_branch_protection" "self" {
   }
 
   required_pull_request_reviews {
-    dismiss_stale_reviews           = true
-    required_approving_review_count = 0
+    dismiss_stale_reviews           = var.dismiss_stale_reviews
+    required_approving_review_count = var.required_approving_review_count
   }
-}
-
-moved {
-  from = github_branch_protection.self
-  to   = github_branch_protection.self[0]
 }
