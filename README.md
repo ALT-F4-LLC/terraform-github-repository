@@ -1,7 +1,7 @@
 # terraform-github-repository
 Terraform module which creates GitHub repository resources.
 
-## Impactful Changes
+## Breaking Changes
 
 ### 0.11.0
 
