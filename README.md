@@ -1,6 +1,19 @@
 # terraform-github-repository
 Terraform module which creates GitHub repository resources.
 
+## Impactful Changes
+
+### 0.11.0
+
+- removes `github_team` data lookup passed from `teams` variable
+- uses team `id` instead of name as key in `teams` variable
+
+#### Example
+
+```hcl
+teams = { "1234567890" = "maintain" }
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
