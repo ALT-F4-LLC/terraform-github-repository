@@ -19,12 +19,27 @@ resource "github_repository" "self" {
   has_issues             = var.has_issues
   has_projects           = var.has_projects
   has_wiki               = var.has_wiki
+  homepage_url           = var.homepage_url
   is_template            = false
   license_template       = var.license_template
   name                   = var.name
   topics                 = var.topics
   visibility             = var.visibility
   vulnerability_alerts   = var.vulnerability_alerts
+
+  dynamic "pages" {
+    for_each = var.enable_pages ? [1] : []
+
+    content {
+      build_type = var.pages_build_type
+      cname      = var.pages_cname
+
+      source {
+        branch = var.pages_branch
+        path   = var.pages_path
+      }
+    }
+  }
 }
 
 resource "github_branch_protection" "self" {
