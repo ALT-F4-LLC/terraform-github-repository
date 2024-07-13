@@ -180,3 +180,14 @@ variable "vulnerability_alerts" {
   description = "Whether the repository has vulnerability alerts enabled"
   type        = bool
 }
+
+variable "webhooks" {
+  default     = []
+  description = "The URLs of the webhooks"
+  type = list(object({
+    active       = bool
+    events       = list(string)
+    content_type = string
+    url          = string
+  }))
+}
