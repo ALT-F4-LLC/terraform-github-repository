@@ -64,3 +64,17 @@ resource "github_branch_protection" "self" {
     required_approving_review_count = var.required_approving_review_count
   }
 }
+
+resource "github_repository_webhook" "self" {
+  for_each = toset(var.webhook_urls)
+
+  active     = each.value.active
+  events     = each.value.events
+  repository = github_repository.self.name
+
+  configuration {
+    content_type = each.value.content_type
+    insecure_ssl = false
+    url          = each.value.url
+  }
+}

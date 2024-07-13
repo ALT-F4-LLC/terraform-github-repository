@@ -19,13 +19,13 @@ teams = { "1234567890" = "maintain" }
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_github"></a> [github](#requirement\_github) | 6.0.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 6.0.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 6.0 |
 
 ## Modules
 
@@ -35,9 +35,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/branch_protection) | resource |
-| [github_repository.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/repository) | resource |
-| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/6.0.0/docs/resources/team_repository) | resource |
+| [github_branch_protection.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_repository.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository_webhook.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_webhook) | resource |
+| [github_team_repository.self](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
 
 ## Inputs
 
@@ -71,6 +72,7 @@ No modules.
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | The visibility of the repository | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Whether the repository has vulnerability alerts enabled | `bool` | `false` | no |
+| <a name="input_webhook_urls"></a> [webhook\_urls](#input\_webhook\_urls) | The URLs of the webhooks | <pre>list(object({<br>    active       = bool<br>    events       = list(string)<br>    content_type = string<br>    url          = string<br>  }))</pre> | `[]` | no |
 
 ## Outputs
 

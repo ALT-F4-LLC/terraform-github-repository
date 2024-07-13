@@ -1,0 +1,9 @@
+---
+name: terraform-github-repository
+template: terraform-module
+parameters:
+  nix:
+    cachix:
+      binaryCache: altf4llc-os
+  providers:
+    - github
