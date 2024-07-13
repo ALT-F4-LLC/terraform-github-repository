@@ -181,7 +181,7 @@ variable "vulnerability_alerts" {
   type        = bool
 }
 
-variable "webhook_urls" {
+variable "webhooks" {
   default     = []
   description = "The URLs of the webhooks"
   type = list(object({

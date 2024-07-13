@@ -72,7 +72,7 @@ No modules.
 | <a name="input_topics"></a> [topics](#input\_topics) | The topics of the repository | `list(string)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | The visibility of the repository | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Whether the repository has vulnerability alerts enabled | `bool` | `false` | no |
-| <a name="input_webhook_urls"></a> [webhook\_urls](#input\_webhook\_urls) | The URLs of the webhooks | <pre>list(object({<br>    active       = bool<br>    events       = list(string)<br>    content_type = string<br>    url          = string<br>  }))</pre> | `[]` | no |
+| <a name="input_webhooks"></a> [webhooks](#input\_webhooks) | The URLs of the webhooks | <pre>list(object({<br>    active       = bool<br>    events       = list(string)<br>    content_type = string<br>    url          = string<br>  }))</pre> | `[]` | no |
 
 ## Outputs
 
