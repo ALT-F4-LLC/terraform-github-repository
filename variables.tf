@@ -182,9 +182,9 @@ variable "vulnerability_alerts" {
 }
 
 variable "webhooks" {
-  default     = []
-  description = "The URLs of the webhooks"
-  type = list(object({
+  default     = {}
+  description = "Webhooks to configure for the repository"
+  type = map(object({
     active       = bool
     events       = list(string)
     content_type = string

@@ -66,7 +66,7 @@ resource "github_branch_protection" "self" {
 }
 
 resource "github_repository_webhook" "self" {
-  for_each = toset(var.webhooks)
+  for_each = { for webhook_key, webhook in var.webhooks : webhook_key => webhook }
 
   active     = each.value.active
   events     = each.value.events
