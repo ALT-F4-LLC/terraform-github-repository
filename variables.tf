@@ -23,7 +23,7 @@ variable "allow_squash_merge" {
 }
 
 variable "archive_on_destroy" {
-  default     = true
+  default     = false
   description = "Set to true to archive the repository instead of deleting on destroy"
   type        = bool
 }
