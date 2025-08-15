@@ -20,7 +20,7 @@ jobs:
         with:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           name: ${{ env.CACHIX_BINARY_CACHE }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: nix develop -c just check
 
   package:
@@ -35,5 +35,5 @@ jobs:
         with:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           name: ${{ env.CACHIX_BINARY_CACHE }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: nix develop -c just package
