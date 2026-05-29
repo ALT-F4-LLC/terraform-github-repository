@@ -1,4 +1,3 @@
-.direnv
 *.tfplan
 
 # Local .terraform directories
