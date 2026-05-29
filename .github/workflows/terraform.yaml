@@ -14,5 +14,5 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false
-      - uses: extractions/setup-just@v2
+      - uses: extractions/setup-just@v4
       - run: just check
