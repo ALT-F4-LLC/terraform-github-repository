@@ -1,6 +1,4 @@
 .git
 .github
 .gitignore
-flake.lock
-flake.nix
 justfile
